@@ -17,10 +17,10 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-          command: |
+          command: "
             echo 'export PATH=/path/to/foo/bin:"$PATH"' >> "$BASH_ENV"
             echo 'export VERY_IMPORTANT=$(cat important_value)' >> "$BASH_ENV"
-            source "$BASH_ENV"
+            source "$BASH_ENV""
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
